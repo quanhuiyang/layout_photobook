@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/*--------------
+Global
+---------------*/
+html {
+	font-size: 100%;
+}
+
+body {
+	color: #333;
+	font-size: 0.875rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.inner {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.section-title {
+	font-size: 1.125rem;
+	font-weight: bold;
+	letter-spacing: 0.5rem;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#main {
+	height: calc(100vh - 150px);
+	/* 設置內容區域高度為視口高度減去header和footer高度 */
+	overflow-y: auto;
+	/* 設置內容區域內容超出高度時可以滾動 */
+}
+
+
+/*--------------
+Header
+---------------*/
+#header {
+	margin-top: 3px;
+	display: flex;
+	height: 100px;
+	/* 固定高度 */
+}
+
+#header .site-title {
+	width: 180px;
+	line-height: 1px;
+	margin-bottom: 15px;
+}
+
+#header .site-title a {
+	display: block;
+}
+
+nav {
+	display: inline-block;
+	margin-top: 40px;
+	margin-left: auto;
+	justify-content: flex-end;
+}
+
+nav a {
+	color: #333;
+	list-style: none;
+	text-decoration: none;
+	font-size: 1rem;
+	margin-right: 20px;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: darkcyan;
+}
+
+/*--------------
+Main visual
+---------------*/
+#mainvisual {
+	margin-bottom: 60px;
+}
+
+#mainvisual img:hover {
+	filter: brightness(1.2);
+}
+
+/*--------------
+Index
+---------------*/
+#index {
+	background-color: #f5f5f5;
+	padding: 60px;
+	margin-bottom: 60px;
+}
+
+#index .index-inner {
+	border: solid 1px #333;
+	padding: 30px;
+}
+
+/*讓文字內容因應文字長度而置中*/
+#index .index-inner .index-list {
+	display: table;
+	margin: 0 auto;
+}
+
+#index .index-inner .index-list li {
+	margin-bottom: 20px;
+}
+
+#index .index-inner .index-list li:last-child {
+	margin-bottom: 0;
+}
+
+/*--------------
+List
+---------------*/
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 45px;
+	padding-left: 0;
+}
+
+.list li {
+	width: 49%;
+	margin-bottom: 15px;
+}
+
+.list li img {
+	vertical-align: bottom;
+}
+
+.list img:hover {
+	filter: brightness(1.2);
+}
+
+/*--------------
+Detail
+---------------*/
+#detail {
+	background-color: #f5f5f5;
+	padding: 60px;
+	margin-bottom: 60px;
+}
+
+#detail .flex {
+	display: flex;
+}
+
+#detail dl {
+	width: 35%;
+	border-right: solid 1px #333;
+	padding-right: 40px;
+}
+
+#detail dt {
+	font-weight: bold;
+
+}
+
+#detail dd {
+	margin-bottom: 10px;
+	margin-inline-start: 60px;
+}
+
+
+
+#detail dd:last-child {
+	margin-bottom: 0;
+}
+
+#detail .text {
+	width: 65%;
+	padding-left: 40px;
+}
+
+#detail .text p {
+	margin-bottom: 20px;
+}
+
+#detail .text .link {
+	color: #333;
+}
+
+#detail .text .link:hover {
+	opacity: 0.6;
+	color: darkcyan;
+}
+
+/*--------------
+Footer
+---------------*/
+#footer {
+	font-size: 0.625rem;
+	padding: 15px 0;
+	text-align: center;
+	height: 50px;
+	/* 固定高度 */
+}
+
+/*--------------
+RWD
+---------------*/
+
+@media screen and (max-width: 1024px) {
+	.inner {
+		padding: 0 20px;
+	}
+
+	#header {
+		padding: 0 10px;
+	}
+
+	#index {
+		padding: 40px 20px;
+	}
+
+	.list {
+		flex-direction: column;
+		padding-left: 0;
+	}
+
+	.list li {
+		width: 100%;
+		text-align: center;
+	}
+
+	.list img:hover {
+		filter: brightness(1.2);
+	}
+
+
+	#detail {
+		padding: 40px 80px;
+
+	}
+
+	#detail .flex {
+		flex-direction: column;
+	}
+
+	#detail dl {
+		width: 100%;
+		border-right: none;
+		border-bottom: solid 1px #333;
+		padding: 0 0 40px 0;
+	}
+
+	#detail .text {
+		width: 100%;
+		padding: 20px 0 0 0;
+	}
+}
